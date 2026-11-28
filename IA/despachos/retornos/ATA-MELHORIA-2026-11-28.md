@@ -159,3 +159,34 @@ Contribuições objetivas, preferencialmente novas ou sustentadas pelo piloto. N
 ### Contribuições da rodada RC-01
 
 Aguardando primeira contribuição. Acrescentar ao final deste documento, com identificação e sem reescrever a abertura.
+
+---
+
+## Contribuição RC-01 — AGT-002 / Codex
+
+**participante:** `AGT-002`
+
+**papel:** auditoria documental / QA-Security
+
+**modelo/sessão:** Codex; modelo e versão não informados pela interface; sessão atual
+
+**autoria intelectual:** AGT-002
+
+**registrado/publicado por:** AGT-002, mediante autorização de HUMAN-001
+**proveniência:** consulta direta da ata na `main` em `a5e8cc63`; contribuição própria; sem execução, alteração de código, VM, infraestrutura ou normas
+
+### Proposta: ciclo mínimo único por entrega
+
+**Classificação:** `IMPLEMENTAR AGORA` como decisão de método, condicionada à aprovação específica de HUMAN-001; não constitui alteração normativa nesta ata.
+
+1. **Eliminar imediatamente:** claims intermediários para cada ajuste documental, duplicação do mesmo estado em vários arquivos, revalidações repetidas de artefatos já fixados e novas tarefas de governança antes de uma entrega de produto. Uma correção deve ter uma reivindicação, uma entrega e uma revisão; correções posteriores entram como novo ciclo somente quando mudarem o risco ou o escopo.
+2. **Reunir em um registro:** para cada ciclo, manter um retorno único com `task_id`, `claim_id`, base, caminhos autorizados, autor/modelo, executor, revisor, publicador, SHA, resultado, limitações e próxima ação. O índice guarda apenas o estado operacional corrente e o link para a tarefa; o histórico detalhado fica no retorno. `PAINEL.md` permanece congelado até haver decisão específica para regenerá-lo.
+3. **Preservar sem duplicar:** posse antes da alteração substantiva, escopo exato de caminhos, base/SHA verificável, revisão independente para código/scripts, decisão humana antes da VM, custo R$ 0,00 e classificação `MEDIADO`/`RELATADO` para execução humana. Esses são gates; não devem ser recontados como novas tarefas quando já houver evidência aplicável.
+4. **Reduzir intervenções humanas:** após a revisão aprovada, HUMAN-001 recebe somente um comando versionado, um critério de sucesso e uma regra de parada. A sessão sucessora lê a tarefa, o retorno e o índice, sem reconstruir toda a conversa. Se a execução bloquear, registrar o motivo e encerrar o ciclo; não criar automaticamente outra rodada.
+5. **Retomar o produto:** depois da decisão humana sobre o piloto TKC-0016, abrir uma única tarefa pequena de produto com executor e revisor distintos. O próximo ciclo deve medir quatro coisas: tempo da entrega, tempo do rito, intervenções/retrabalho e custo efetivo (ou `NÃO MEDIDO`). Sem novo painel, nova matriz ou nova norma para iniciar esse trabalho.
+
+### Menor conjunto recomendado
+
+`task_id + claim_id + base + scope_paths + executor + reviewer + commit_sha + resultado + limitações + next_action`, em um retorno único, mais uma linha corrente no índice. O restante é histórico ou referência, não novo rito.
+
+**Contribuição final:** simplificar o método significa reduzir documentos e decisões repetidas, não remover os gates que impediram atribuição presumida, execução sem posse ou promoção indevida de M3-02. `M3-02` permanece `PENDENTE` até evidência e decisão próprias.
