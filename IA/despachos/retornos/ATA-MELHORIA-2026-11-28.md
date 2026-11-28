@@ -246,3 +246,269 @@ Concluído o piloto `TKC-0016` (`56cd643`), não abrir nova tarefa exclusivament
 **Classificação recomendada para itens adiáveis (`ADIAR`):** PR/CI remoto, proteção automatizada de branch, locks distribuídos, automação ampla e reescrita em massa de artefatos históricos.
 
 **Fecho:** simplificar o método no eixo DevOps significa congelar o que já funcionou na VM como padrão reutilizável e cortar ritos e scripts redundantes — preservando integralmente os gates de posse, isolamento, revisão independente e custo zero. `M3-02` permanece `PENDENTE` até decisão e evidência próprias. Esta participação contém apenas propostas, sem alteração de normas, código, scripts ou estado de tarefas.
+
+
+---
+
+### RC-01 — CONVIDADO-01 | Meta AI — publicação mediada
+
+**Identificação:** CONVIDADO-01 (designação proposta por AGT-004 a pedido de HUMAN-001), Meta AI, modelo desconhecido, convidado externo sem papel funcional ou autoridade operacional. Não confundir com AGT-ACI (Claude). **Autor intelectual:** Meta AI. **Registrador e publicador técnico:** AGT-004, por solicitação expressa de HUMAN-001 nesta conversa, excepcionalmente em lugar de AGT-001 para evitar novo transporte integral; identidade técnica conforme commit. **Proveniência:** MEDIADO; texto recebido de HUMAN-001, sem verificação independente das afirmações da Meta AI. Publicação exclusivamente nesta ata, sem alteração de outros registros ou decisão normativa. A identificação é proposta para confirmação da coordenação, não atribuição operacional.
+
+#### Texto integral recebido — Meta AI
+
+## Contribuição para RC-01 — Entrega para publicação mediada
+
+**Declaração de modo antes de qualquer conteúdo:**
+
+- **Modo de acesso:** MEDIADO, sem acesso Git, sem escrita no GitHub.
+- **Papel:** sem papel funcional. Não sou AGT-001. Não herdei papel por receber contexto.
+- **Leitura efetiva:** **não consegui ler** o arquivo `IA/despachos/retornos/ATA-MELHORIA-2026-11-28.md`, nem a seção 10, nem o protocolo da rodada complementar, a partir do caminho local informado.
+- O caminho `/home/grubert/TeamKitCollection/...` é um caminho de máquina local. Não tenho acesso a ele nesta conversa.
+- Por isso, **não vou inventar o conteúdo da ata nem afirmar que li a seção 10**.
+
+O texto abaixo é minha **contribuição integral identificada**, para que HUMAN-001 a encaminhe para publicação mediada por AGT-001, se assim decidir.
+
+Não declarei ter publicado nada. Não declarei SHA. Não executei nenhuma ação.
+
+---
+
+### TEXTO INTEGRAL DA CONTRIBUIÇÃO — PARA PUBLICAÇÃO MEDIADA
+
+**Identificação da contribuição**
+
+- **Origem:** IA receptora sem Git, sem papel funcional, sem permissão de escrita
+- **Destino:** HUMAN-001, para publicação mediada por AGT-001
+- **Reunião:** RC-01 — Reunião Complementar
+- **Referência citada na convocação:** ATA-MELHORIA-2026-11-28 @a5e8cc6
+- **Prioridade declarada:** simplificar o método e retomar o desenvolvimento do aplicativo
+- **Custo absoluto:** R$ 0,00
+- **Modo:** somente leitura, análise e proposta. Nenhuma escrita, nenhum custo, nenhuma operação de infraestrutura.
+
+**Limitação declarada pelo contribuinte:**
+
+O contribuinte não teve acesso direto ao texto da ata, especialmente à seção 10. Esta contribuição não deve ser interpretada como concordância com cláusulas que o contribuinte não leu. Se qualquer parte desta contribuição conflitar com a ata primária, prevalece a ata primária e esta contribuição deve ser corrigida por HUMAN-001 / AGT-001 antes da publicação.
+
+---
+
+#### 1. Diagnóstico em uma frase
+
+O método não está travado por falta de documentos. Está travado por excesso de camadas de verificação textual sem um caminho curto e seguro para voltar a produzir evidência operacional simples.
+
+A simplificação deve reduzir burocracia, não reduzir evidência.
+
+#### 2. Princípio de simplificação proposto
+
+**Proposta 1 — Regra dos 3 estados operacionais**
+
+Manter a taxonomia completa em documento de referência, mas usar no dia a dia apenas:
+
+- **PROPOSTO** — ideia ou plano, sem execução;
+- **EM_EXECUÇÃO / EM_REVISÃO** — trabalho em andamento;
+- **VERIFICADO** — com evidência mínima indicada: arquivo, commit, comando ou log.
+
+Tudo que não for VERIFICADO continua sendo RELATADO, mesmo que esteja bem escrito.
+
+Objetivo: impedir que texto bem escrito seja confundido com teste executado.
+
+**Proposta 2 — Evidência mínima, não evidência perfeita**
+
+Para cada tarefa, exigir apenas uma evidência proporcional:
+
+- tarefa documental: link/arquivo + commit;
+- tarefa de código: arquivo + teste executado;
+- tarefa de infra: comando + saída + como desfazer.
+
+Se não houver essa evidência mínima, a tarefa não muda de estado.
+
+Isso é mais simples do que um processo pesado e mais forte do que um relato textual.
+
+**Proposta 3 — Separar “decisão humana” de “relato de IA”**
+
+Nenhuma decisão de HUMAN-001 pode ser considerada tomada porque uma IA disse que ele concordou.
+
+Proposta de formato mínimo para decisão:
+
+- o que foi decidido;
+- escopo exato;
+- data;
+- canal;
+- se é TRUE, FALSE ou PENDENTE.
+
+Sem isso, o estado é PENDENTE.
+
+**Proposta 4 — Travar o script de VM até revisão explícita**
+
+O pacote CTX-TKC-M1-001 já registra risco conhecido no `scripts/infra/create-vm-virtualbox.sh`, com comando de exclusão de VM e revisão pendente.
+
+Proposta:
+
+- manter o script bloqueado para execução;
+- criar uma ficha mínima de revisão antes de qualquer execução, contendo:
+  - o que o script cria;
+  - o que ele pode excluir;
+  - em que condição a exclusão dispara;
+  - como desfazer;
+  - custo;
+  - aprovação específica.
+
+Sem essa ficha, nenhuma execução deve ser autorizada, mesmo que pareça “só criar uma VM”.
+
+**Proposta 5 — Retomar o aplicativo pelo menor incremento verificável**
+
+Prioridade: retomar o desenvolvimento do aplicativo, não continuar discutindo o método em abstrato.
+
+Proposta de próximo incremento mínimo, com custo R$ 0,00:
+
+- **M1-APP-01 — Esqueleto mínimo legível:**
+  - uma página ou rota mínima;
+  - um cadastro mínimo de camiseta em memória ou arquivo local, sem banco ainda;
+  - um teste mínimo executável;
+  - um README curto de como rodar.
+
+Critério de conclusão:
+
+- qualquer pessoa consegue rodar com comandos documentados;
+- teste executado com saída registrada;
+- commit identificado.
+
+Isso devolve ao projeto o que ele mais precisa agora: **uma evidência operacional pequena, mas real**, em vez de mais uma rodada de verificação textual.
+
+**Proposta 6 — Congelar a discussão de método por uma tarefa**
+
+Proposta operacional:
+
+- escolher **uma** tarefa de aplicativo;
+- executar **uma** tarefa;
+- registrar **uma** evidência;
+- só depois voltar a discutir melhoria do método.
+
+Se cada rodada de melhoria do método gerar mais documentos do que evidências, o método está se tornando o produto — e o aplicativo fica parado.
+
+**Proposta 7 — Pacote de contexto com validade explícita**
+
+Todo pacote mediado deveria trazer:
+
+- data/hora de captura;
+- commit de referência, se houver;
+- lista do que é resumo e do que é transcrição;
+- aviso de que não substitui verificação em Git.
+
+Isso evita que um pacote antigo seja usado como se fosse o estado atual da `main`.
+
+#### 3. O que eu NÃO proponho
+
+- Não proponho executar o script de VM.
+- Não proponho corrigir documentos diretamente.
+- Não proponho declarar M1 como concluído.
+- Não proponho assumir papel de coordenação.
+- Não proponho gastar qualquer valor.
+- Não proponho introduzir serviço pago, avaliação temporária ou dependência com custo não comprovado.
+
+#### 4. Próximo passo seguro proposto
+
+1. HUMAN-001 / AGT-001 publicam as contribuições recebidas, com identificação de origem e modo de acesso.
+2. HUMAN-001 decide **uma** tarefa mínima de aplicativo como próxima.
+3. Um agente com Git verifica em leitura:
+   - estado atual da `main`;
+   - existência e conteúdo atual de `AGENTS.md`, `IA/PROJETO.md` e do relatório M1;
+   - conteúdo atual do script de VM.
+4. Só após essa verificação, HUMAN-001 decide se autoriza a próxima execução, com escopo explícito.
+
+**Fim da contribuição.**
+
+---
+
+### Entrega
+
+Como não possuo escrita no GitHub, entrego o texto acima **integral e identificado** a HUMAN-001, para publicação mediada por AGT-001, se HUMAN-001 assim decidir.
+
+Não afirmo que este texto foi publicado. Não afirmo SHA. Não afirmo que li a ata.
+
+Se você colar aqui o texto da ata, especialmente a seção 10, faço a revisão da minha contribuição contra o protocolo real e corrijo qualquer parte que conflite com ele, ainda em somente leitura.
+
+#### Fim da transcrição Meta AI
+
+---
+
+### RC-01 — AGT-ACI | Claude (Anthropic) — publicação mediada
+
+**Identificação:** AGT-ACI, consultor intelectual, Claude Sonnet 5.5 (modelo autodeclarado, identificação informada por HUMAN-001; não verificada). **Autor intelectual:** Claude. **Registrador e publicador técnico efetivo:** AGT-004, mediante solicitação expressa de HUMAN-001 nesta conversa, excepcionalmente em lugar de AGT-001; identidade técnica conforme commit. **Proveniência:** MEDIADO; texto recebido integralmente de HUMAN-001. As afirmações de leitura direta, testes em exemplos, custo e identificação do modelo pertencem ao autor original; não foram verificadas por AGT-004. O campo de publicação por AGT-001 dentro da transcrição abaixo expressa o destino originalmente pretendido, não a autoria da publicação efetiva.
+
+#### Texto integral recebido — AGT-ACI
+
+Vou conferir uma condição de custo antes de registrar a contribuição.
+
+Participo da RC-01 sem escrita no GitHub, então a contribuição abaixo está pronta para você entregar ao AGT-001 publicar (protocolo, item 4 da seção 10). Li a ata pela cópia que você colou. Não confirmei que ela equivale ao `a5e8cc6`, então é `MEDIADO`. O commit `152afb1` eu abri diretamente hoje. Conferi antes um ponto de custo: o uso de runners padrão hospedados pelo GitHub é gratuito em repositórios públicos, e os runners maiores são sempre cobrados, inclusive em repositórios públicos.
+
+## Contribuição RC-01 — Claude (Anthropic)
+
+**participante:** Claude
+**papel:** revisor textual / participante (não auditor independente das próprias ideias)
+**modelo/sessão:** Claude Sonnet 5.5 (autodeclarado; a ata registra "modelo não informado"); sessão de chat atual
+**autoria intelectual:** Claude
+**registrado/publicado por:** AGT-001 III, a partir do texto integral entregue por HUMAN-001
+**proveniência:** MEDIADO. Sem escrita no GitHub. Leitura direta intermitente nesta sessão (falhas de limite e de servidor no TKC-0010 hoje). Ata lida em cópia colada, sem confirmar equivalência com `a5e8cc6`. Commit `152afb1` lido diretamente nesta sessão. Sem execução no repositório; os comandos abaixo foram testados em repositórios de exemplo, não neste.
+**conflito declarado:** as propostas B e C derivam de ideias minhas anteriores; revisão independente pertence a outra sessão.
+
+### Concordância
+O "retorno único por ciclo", o menor conjunto de campos e a regra de parada da contribuição de AGT-002 são compatíveis com o que propus. Concordância entre nós não é votação independente.
+
+### Proposta A — reabrir só a fatia mínima do M-07, com evidência do piloto
+**Evidência nova:** o impedimento CAP (`152afb1`: checkout não localizado, pytest não executado) e o fechamento da TKC-0016 só com testes executados por HUMAN-001 mostram que a falta de ambiente de teste vira trabalho humano.
+**Fatia:** um workflow de GitHub Actions somente leitura que roda os testes (checkout, instalação das dependências, pytest) em push e em PR. Sem proteção de branch, sem PR obrigatório; esses pontos continuam adiados.
+**Efeito esperado:** resultado `VERIFICADO` pelo GitHub e HUMAN-001 deixa de executar testes.
+**Custo R$ 0,00 (documentação consultada em 28/11/2026):** runners padrão são gratuitos em repositório público; runners maiores são sempre cobrados. Usar apenas `ubuntu-latest`, manter o repositório público, sem runners maiores. Conferir a página de cobrança da conta antes.
+**Condições:** AUT própria (muda a configuração do repositório); `permissions: contents: read`; sem segredos; dependências com versões fixas (não conheço o arquivo de dependências do projeto). Não testei o workflow.
+**Classificação sugerida:** LAPIDAR; decisão humana depois.
+
+### Proposta B — duas verificações pequenas, já testadas (M-06)
+Podem rodar localmente por qualquer agente com checkout, sem PR.
+
+**Escopo.** Falha se o diff tocar fora de `paths_escrita.txt` (um caminho por linha):
+```
+if git diff --name-only "$BASE"...HEAD | grep -vxFf paths_escrita.txt; then echo "FALHA: fora do escopo"; exit 1; fi
+```
+**Histórico.** A versão simples (falhar com qualquer linha apagada em `IA/tarefas`) **reprovaria o próprio commit `152afb1`**, que trocou 7 linhas de campos correntes em `TKC-0016.md` e 1 no índice. Versão refinada: protege só o que está depois do primeiro `## Histórico`:
+```
+missing=$(git show "$BASE:$ARQ" | sed -n '/^## Histórico/,$p' | grep -vxFf "$ARQ")
+[ -n "$missing" ] && { echo "FALHA: histórico removido: $missing"; exit 1; }
+```
+Testada: aceita edição de cabeçalho com acréscimo de histórico; acusa linha de histórico apagada. Limite: se a linha apagada existir em outro ponto do arquivo, passa.
+**Classificação sugerida:** IMPLEMENTAR AGORA (custo zero), mediante decisão humana.
+
+### Proposta C — autoria de agente no Git
+O commit `152afb1` aparece como feito por `edinhogrubert`, e o PAR informa publicação pelo conector GitHub da sessão. A ata de Codex registra o mesmo. Logo, no Git, escrita de agente e de humano são indistinguíveis; a autoria fica só em campos de texto.
+**Mínimo sem custo:** trailer no commit, por exemplo `Agent: AGT-004` e `Task: TKC-0016-C03`. Testado: `git log -1 --format='%(trailers:key=Agent,valueonly)'` devolve o valor. É autodeclarado, mas torna a autoria consultável por comando.
+**Pré-condição para um M-07 futuro:** uma identidade própria para agentes (token limitado a branches e PRs, ou conta de serviço). Sem isso, proteger a `main` não separa agente de humano. Adiar a implantação, mas registrar.
+**Classificação sugerida:** trailer, IMPLEMENTAR AGORA; identidade própria, ADIAR.
+
+### Proposta D — medir o AGENTS.md antes de decidir
+AGT-002 tem checkout e pode medir `wc -c AGENTS.md` agora. Consulta anterior desta sessão indicou que o Codex tem um limite padrão de 32 KiB acumulado para esses arquivos, **a verificar na documentação atual**; não está confirmado aqui. Se o arquivo passar do limite, o final pode não estar sendo carregado por quem revisa. Sem decisão necessária.
+**Classificação sugerida:** IMPLEMENTAR AGORA (leitura).
+
+### Respostas às questões da rodada, em uma linha cada
+- **Eliminar:** claims intermediários e estado duplicado, como já proposto por AGT-002.
+- **Preservar sem duplicar:** posse, escopo exato, base, revisão distinta e custo zero.
+- **Reduzir intervenção humana:** testes em CI (A) e verificações locais (B), em vez de execução ou conferência manual.
+- **Menor conjunto para retomar o produto:** B, C (trailer) e D agora; A após decisão; nada de novo painel ou norma.
+
+Duas observações minhas, fora do bloco:
+
+- **A proposta A reabre um ponto que a coordenação adiou.** Por isso a apresentei como "evidência nova do piloto" e limitei à fatia mais pequena, conforme o protocolo da rodada.
+- **Se o seu AGT-001 preferir, posso cortar o bloco para só B, C e D**, que não mexem na configuração do repositório. A decisão de incluir ou não a A é dele e sua.
+
+Se quiser, passo a contribuição para um Claude Doc; mas o texto entregue ao AGT-001 deve ser o bloco acima, integral.
+
+#### Fim da transcrição AGT-ACI
+
+---
+
+### RC-01 — Avaliação complementar AGT-004 sobre as contribuições mediadas
+
+**Autoria:** AGT-004 — Backend, ChatGPT / GPT-6.2 (autodeclarado). Avaliação própria apresentada a HUMAN-001 nesta conversa, separada dos textos originais; não é decisão de AGT-001 ou autorização de implementação.
+
+**Meta AI (CONVIDADO-01, proposto):** P1 LAPIDAR — VERIFICADO classifica evidência, não estado da tarefa; P2 IMPLEMENTAR AGORA — evidência proporcional ao risco, sem dispensar aceite; P3 JÁ CONTEMPLADA em COM-001/002 — não duplicar; P4 ADIAR nova ficha sem demanda ou evidência nova, mantendo as restrições vigentes do script; P5 LAPIDAR — aproveitar FastAPI e PostgreSQL existentes, não reconstruir esqueleto provisório; P6 IMPLEMENTAR AGORA — retomar o produto após simplificação mínima; P7 LAPIDAR — aproveitar CTX existente. Convidado sem autoridade operacional ou auditoria independente de fonte primária.
+
+**AGT-ACI (Claude Sonnet 5.5, autodeclarado):** A LAPIDAR — CI pode reduzir intervenção humana, mas custo zero e segurança efetivos do repositório devem ser confirmados por DevOps antes de AUT própria; não substituir integração na VM nem condicionar retomada do produto ao CI. B escopo IMPLEMENTAR AGORA como verificação auxiliar após decisão, tratando erros Git explicitamente; histórico LAPIDAR, pois presença de linhas não prova ordem, multiplicidade ou contexto e não substitui revisão do diff. C trailers IMPLEMENTAR AGORA como proposta de identificação consultável e autodeclarada, não autenticação; identidade própria ADIAR. D IMPLEMENTAR AGORA como medição de leitura, sem presumir truncamento ou limite. Nenhum comando proposto foi executado por AGT-004 nesta publicação.
+
+**Encaminhamento:** AGT-001 III deve consolidar e classificar as propostas; HUMAN-001 decide. A publicação mediada excepcional foi solicitada por HUMAN-001 para evitar copiar e colar novamente. A contribuição AGT-003 já consta no commit `6e196faade8de789871796d00ab8059b0d8faf09`, conferido diretamente na main, e não foi duplicada. Somente esta ata foi autorizada para acréscimos. Nenhuma norma, estado de tarefa, código, script, infraestrutura ou configuração foi modificado; nenhuma execução de teste ou VM. Custo absoluto R$ 0,00, custo efetivo NÃO MEDIDO.
