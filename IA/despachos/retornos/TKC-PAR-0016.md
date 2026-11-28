@@ -341,3 +341,24 @@ Nos traps `INT`/`TERM`, o script sai com `130/143` e cai em `cleanup()`. Essa fu
 ## Veredito
 
 `BLOQUEADO PARA EXECUÇÃO HUMANA` até corrigir essa lacuna sob nova autorização e obter nova revisão AGT-002. `M3-02` permanece `PENDENTE`; custo efetivo `NÃO MEDIDO`.
+
+---
+
+# C19 — Revisão pontual conclusiva da C18
+
+**claim próprio:** `TKC-0016-C19`, publicado e confirmado em `a9d73ff` antes deste parecer
+
+**base:** `d55a6cf` — C18; script `894a157` (blob `e910023`); ordem `18a58fd`
+
+**revisor:** `AGT-002` (Codex; modelo/versão não informados pela interface)
+
+## Verificações
+
+- `verify_container_absent()` agora é chamada por `cleanup()` após `INT`/`TERM`, antes da remoção de `$work`.
+- Falhas de `docker ps -a` não são tratadas como ausência: o script emite `VAL=BLOQUEADA` e retorna falha. Se houver residual, executa `stop`/`rm` e reconsulta; persistência também bloqueia.
+- O cleanup converte sucesso em código não zero quando não consegue confirmar a limpeza e preserva códigos já não zero, inclusive `130`/`143`.
+- Timeout, `sudo_env`, hashes, isolamento, retorno do pytest/Docker e critérios do patch permanecem preservados. Nenhum script/código ou VM foi alterado/executado por AGT-002.
+
+## Veredito
+
+`APROVADO PARA EXECUÇÃO HUMANA`, condicionado a novo `#TRUE` de HUMAN-001, custo absoluto de R$ 0,00 e registro posterior como `MEDIADO`/`RELATADO`. A ressalva C17 está resolvida; `M3-02` permanece `PENDENTE`.
