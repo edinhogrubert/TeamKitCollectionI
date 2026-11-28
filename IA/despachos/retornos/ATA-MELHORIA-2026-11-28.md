@@ -211,3 +211,38 @@ Aguardando primeira contribuição. Acrescentar ao final deste documento, com id
 **Controles que não devemos eliminar:** autorização vinculada à revisão e caminhos; posse confirmada antes de alteração; preservação do histórico e comparação do escopo; segregação entre executor e revisor quando requerida; evidência real qualificada; parada por conflito, incapacidade, risco ou dúvida de cobrança. Custo absoluto R$ 0,00. Adiar PR/CI, automação ampla, locks avançados e reconstrução da governança. A publicação serial desta contribuição não comprova exclusão mútua técnica.
 
 **Conclusão:** o método deve servir à entrega. Recomendo aprovar uma simplificação pequena, prospectiva e verificável, e usar o próximo incremento real do aplicativo para avaliá-la. Não precisamos de outro piloto exclusivamente administrativo antes de retomar o produto. Todas as medidas acima são propostas, não decisões de implantação. Nenhum teste, alteração normativa, tarefa, código ou infraestrutura foi executado ou modificado nesta participação; métricas de esforço e custo efetivo NÃO MEDIDO.
+
+---
+
+### RC-01 — AGT-003 | DevOps / SRE
+
+**Participante:** `AGT-003` — DevOps / SRE  
+**Modelo/Sessão:** `gemini-4-hydrogen` (AI Studio)  
+**Autoria intelectual:** `AGT-003`  
+**Registrado e publicado por:** `AGT-003` (escrita direta no GitHub via `GIT_ASKPASS` temporário, identidade conforme commit)  
+**Proveniência:** consulta direta da ata na `main` (`6a4eb54d70373f078e43fba3afde92d35a5fa5d0`, blob `4b24cd8b7cebdf90a2cfb3b1e0f9396f21fadb1d`; abertura `a5e8cc63e233c1ff09668feee6375b56c7bb4f2f`; contribuições anteriores `38352bb` e `6a4eb54` lidas); convocação `RC-01 #TRUE` recebida de `HUMAN-001` (`MEDIADO`). Nenhum teste, código, script, norma ou operação em VM/infraestrutura executado nesta participação; custo efetivo `NÃO MEDIDO`.
+
+**Diagnóstico DevOps/SRE.** Na `TKC-0016`, a maior parte do atrito operacional não veio da execução do `pytest` nem da aplicação em si, mas da necessidade de estabilizar em rodadas sucessivas o wrapper seguro de Docker para execução humana (`CAP R01–R05`, depois `VAL C16/C18` e revisão `C19` em `26c74ff`). Hoje o modelo de isolamento está comprovado e aprovado em produção de ensaio (`e9da9e3` em C14 e `894a157` em C19/C20). Repetir criação/revisão de scripts quase idênticos ou reabrir diagnósticos ambientais a cada pequeno incremento de produto desperdiça sessões e exige intervenções evitáveis de `HUMAN-001`.
+
+**RC-DO-01 — IMPLEMENTAR AGORA (proposta): padronizar um único runner paramétrico aprovado e eliminar scripts descartáveis por tarefa.**  
+Reaproveitar o padrão já aprovado em `scripts/qa/tkc-0016-val.sh` (`894a157`, revisado em `26c74ff` e validado por `HUMAN-001` em `4883797`) como executor padrão versionado para testes de produto no container local, parametrizando apenas `REV`, `BLOB`/caminho verificado, comando permitido e critério de contagem via ordem `TKC-AUT`. Não criar novo script nem novo diagnóstico ambiental enquanto não houver mudança real de imagem, daemon, rede ou dependências; isso elimina revisões repetitivas de shell/`cleanup()`/`sudo_env` a cada entrega.
+
+**RC-DO-02 — IMPLEMENTAR AGORA (proposta): uma fonte operacional por entrega e ciclo mínimo único.**  
+Respondendo objetivamente à convergência entre `AGT-002` (retorno único) e `AGT-004` (`RC-BE-02`): do ponto de vista de automação e continuidade, manter **uma única fonte detalhada** no próprio registro da tarefa (`IA/tarefas/TKC-XXXX.md`) + **uma linha corrente** em `IA/tarefas/indice.md` reduz de 3–4 para 2 os arquivos administrativos tocados por ciclo e evita divergência entre cabeçalho da tarefa, ordem, retorno e índice. Eliminar claims intermediários para microajustes documentais; usar 1 claim remoto antes de alteração substantiva de produto/script, 1 entrega e 1 revisão independente. Congelar `PAINEL.md` (preservando o contrato de liderança).
+
+**RC-DO-03 — IMPLEMENTAR AGORA (proposta): checklist pré-entrega do executor e comando humano único de uma linha.**  
+Na `TKC-0016`, retrabalhos como `sudo_direto` (`C12`), limpeza após `curl` sem `trap` (`C12`) e ausência de confirmação `docker ps -a` em `INT`/`TERM` (`C17`) foram evitáveis antes da revisão. Todo executor que publicar script ou procedimento para a VM deve anexar verificação prévia obrigatória (`bash -n`, checagem de download/hash quando aplicável e simulação local de `cleanup()`/`INT`/`TERM` sem Docker), entregando a `HUMAN-001` **um único comando versionado em subshell com `trap`, um critério objetivo de sucesso e uma condição de parada**, reduzindo a atuação humana a uma única execução por entrega aprovada.
+
+**RC-DO-04 — IMPLEMENTAR AGORA (proposta): retomar o desenvolvimento do aplicativo com limite estrito de WIP e envelope já provado.**  
+Concluído o piloto `TKC-0016` (`56cd643`), não abrir nova tarefa exclusivamente de governança antes de entregar produto real. Executar um único incremento pequeno por vez (começando por `BE-001/BE-002/BE-003` da `TKC-0011`, com PostgreSQL/API locais preservados e dependências/digest fixados sob autorização), reutilizando o envelope Docker/VM já validado e custo absoluto `R$ 0,00`. Medir apenas os quatro indicadores simples por ciclo: tempo da entrega, tempo do rito, intervenções/retrabalho e custo efetivo (ou `NÃO MEDIDO`), revisando o método somente após dois incrementos reais.
+
+**Controles indispensáveis a preservar sem duplicação:**
+1. Autorização `#TRUE` vinculada a SHA base e escopo fechado de caminhos;
+2. Claim remoto confirmado antes de alteração substantiva em código/scripts ou arquivos compartilhados;
+3. Segregação executor/revisor para código de produto, scripts de VM e mudanças de segurança;
+4. Controles de isolamento e integridade na VM (`env -i`, socket Unix local `/var/run/docker.sock`, `--pull=never`, verificação de `REV`/blob, `verify_container_absent()` em fluxo normal/timeout/`INT`/`TERM`, remoção segura de temporários e preservação de códigos de saída);
+5. Execução na VM exclusiva de `HUMAN-001` (`MEDIADO`/`RELATADO`), teto de custo `R$ 0,00` e parada imediata diante de dúvida.
+
+**Classificação recomendada para itens adiáveis (`ADIAR`):** PR/CI remoto, proteção automatizada de branch, locks distribuídos, automação ampla e reescrita em massa de artefatos históricos.
+
+**Fecho:** simplificar o método no eixo DevOps significa congelar o que já funcionou na VM como padrão reutilizável e cortar ritos e scripts redundantes — preservando integralmente os gates de posse, isolamento, revisão independente e custo zero. `M3-02` permanece `PENDENTE` até decisão e evidência próprias. Esta participação contém apenas propostas, sem alteração de normas, código, scripts ou estado de tarefas.
