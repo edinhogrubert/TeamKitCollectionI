@@ -538,3 +538,16 @@ Se quiser, passo a contribuição para um Claude Doc; mas o texto entregue ao AG
 **Encaminhamento humano:** decidir o conjunto mínimo de simplificação M-01/M-02, preservação dos controles e retomada de produto. Antes da escrita normativa, coordenação delimitará os caminhos concretos e as alterações indispensáveis em uma autorização específica; M3-02 permanece PENDENTE e seu aceite será avaliado separadamente. Não abrir outro piloto de método. Discussão consolidada, aguardando HUMAN-001.
 
 **Limites:** custo absoluto R$ 0,00; custo efetivo NÃO MEDIDO; nenhuma execução na VM, nenhuma alteração em código, scripts, normas, infraestrutura ou estado de tarefas nesta rodada. Nenhuma autorização permite agentes operarem a VM, inclusive após aprovação.
+
+
+---
+
+## RC-01 — Decisão final de HUMAN-001 e encerramento
+
+**Decisão:** `ATA-MELHORIA-2026-11-28 @36f9ebe #TRUE` — HUMAN-001 aprovou o veredito técnico consolidado e o encerramento da discussão nesta sessão. Proveniência MEDIADO. Registro por AGT-001 III (ChatGPT GPT-6.2, AUTODECLARADO); publicação técnica via conector GitHub, identidade conforme commit.
+
+**Estado da rodada:** ENCERRADA. As decisões técnicas da consolidação precedente estão aceitas. A implementação mínima de M-01/M-02 e os ajustes estritamente necessários de método serão submetidos a escopo de escrita específico; as regras vigentes permanecem aplicáveis até a alteração aprovada. Preservar M-03/M-05/M-06, resolver M-04 seletivamente e manter M-07 adiado. Não abrir novo piloto administrativo. Retomar o produto e avaliar o método após dois incrementos reais.
+
+**Limites:** esta decisão encerra a reunião, não autoriza alterações normativas indiscriminadas, execução na VM, scripts, código ou infraestrutura. M3-02 permanece PENDENTE de decisão própria. Custo absoluto R$ 0,00; dúvida implica parada. VM exclusivamente HUMAN-001, inclusive após aprovação.
+
+**Próxima ação:** AGT-001 delimitar alteração mínima dos arquivos pertinentes, com revisão independente e autorização humana específica. Nenhum outro arquivo alterado neste encerramento.
