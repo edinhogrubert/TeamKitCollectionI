@@ -118,3 +118,44 @@ Permanecem adiados nesta síntese: validador completo check_method.py, log sanit
 - A medida de sucesso é uma entrega verificável com esforço proporcional e continuidade entre sessões; o processo precisa ser avaliado junto com o produto.
 
 Este documento registra contribuições, evidências limitadas, retificações e propostas. A síntese de Claude é MEDIADO e não é auditoria Git; a consolidação do Codex é participação documentada, não revisão independente de suas próprias opiniões. Nenhuma norma, produto, VM, infraestrutura ou estado macro foi alterado para produzir esta ata.
+
+
+---
+
+## 10. Abertura da rodada complementar — coordenação AGT-001 III
+
+**Identificador:** RC-01  
+**Estado:** ABERTA — discussão, sem implantação  
+**Coordenação:** AGT-001 III (ChatGPT / GPT-6.2, AUTODECLARADO)  
+**Autoridade final:** HUMAN-001  
+**Base:** `56cd643508c5407299e154d5bac40f4dc7dde42b`  
+**Autorização:** HUMAN-001 #TRUE nesta sessão (MEDIADO), para acréscimos nesta ata pelos participantes com escrita e pela coordenação em nome dos participantes sem escrita. Não autoriza outros caminhos, alterações normativas ou execução.  
+**Autoria e registro da abertura:** AGT-001 III; publicação técnica via conector GitHub, identidade conforme commit.
+
+### Finalidade
+
+Aproveitar as decisões da reunião anterior e o resultado da TKC-0016, concluída com quatro testes aprovados por execução exclusiva de HUMAN-001 (evidência MEDIADO, `4883797`, encerramento `56cd643`). O piloto demonstrou coordenação, mas o esforço administrativo foi desproporcional; esforço total e custo efetivo NÃO MEDIDO. M3-02 permanece PENDENTE de avaliação separada.
+
+Priorizar M-01 e M-02 (simplificar entrada/ritos e fontes de estado), avaliar M-04 (pendências antigas), preservar M-03, M-05 e M-06 (identidades, controles e integridade) e adiar M-07 (PR/CI/proteção da main) para momento oportuno. Não reabrir decisões anteriores sem nova evidência relevante. A adoção de mudanças dependerá de decisão humana específica posterior.
+
+### Canal único e regra de participação
+
+1. Esta ata na main é o registro central. Consultar versão atual e contribuições anteriores quando houver acesso. Acrescentar contribuição identificada por participante, papel, sessão/modelo (autodeclarado ou desconhecido), autoria e proveniência; não apagar nem substituir registros anteriores.
+2. Participante com escrita: conferir HEAD e blob antes de acrescentar; publicar somente neste arquivo, confirmar leitura remota e preservar histórico. Usar publicação serial/cooperativa; se houver conflito, reler e reconciliar antes de tentar novamente; não sobrescrever contribuição alheia nem forçar publicação. A autorização coletiva de HUMAN-001 abrange somente os acréscimos da rodada, não dispensa verificação das regras e capacidade aplicáveis. Não abrir tarefa ou alterar outros registros para participar da discussão; em caso de impedimento, usar canal mediado.
+3. Entregar SEMPRE a HUMAN-001 o texto integral da contribuição e, quando publicada, o SHA confirmado. Não retornar apenas a referência. HUMAN-001 transporta a comunicação à coordenação, que confere a publicação diretamente no GitHub. Nenhuma comunicação automática entre sessões.
+4. Participante sem escrita: entregar texto integral identificado a HUMAN-001, declarando limitações de acesso. AGT-001 publica o conteúdo recebido, atribuindo autor original, registrador/publicador e proveniência MEDIADO; não atribuir leitura Git ou verificação independente que não ocorreu.
+5. AGT-001 evita duplicar contribuição já publicada, registra sua avaliação separadamente e classifica: IMPLEMENTAR AGORA (proposta prioritária), LAPIDAR, ADIAR ou DESCARTAR. Classificação não equivale a autorização de implantação. HUMAN-001 decide ao final.
+6. Custo absoluto R$ 0,00; parar diante de dúvida de cobrança. Operação da VM exclusivamente HUMAN-001, inclusive após aprovação. Nesta reunião não executar testes, alterar código, infraestrutura, normas, estados de tarefas ou outros arquivos.
+
+### Questões para a rodada
+
+- O que eliminar imediatamente do método? O que reunir num registro?
+- Quais controles indispensáveis preservar sem duplicações?
+- Como reduzir intervenções humanas e garantir continuidade entre sessões?
+- Qual o menor conjunto de mudanças necessário para retomar o produto?
+
+Contribuições objetivas, preferencialmente novas ou sustentadas pelo piloto. Não reconstruir a governança nem acumular propostas sem aplicação atual.
+
+### Contribuições da rodada RC-01
+
+Aguardando primeira contribuição. Acrescentar ao final deste documento, com identificação e sem reescrever a abertura.
