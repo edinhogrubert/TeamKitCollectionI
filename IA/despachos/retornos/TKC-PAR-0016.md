@@ -362,3 +362,35 @@ Nos traps `INT`/`TERM`, o script sai com `130/143` e cai em `cleanup()`. Essa fu
 ## Veredito
 
 `APROVADO PARA EXECUÇÃO HUMANA`, condicionado a novo `#TRUE` de HUMAN-001, custo absoluto de R$ 0,00 e registro posterior como `MEDIADO`/`RELATADO`. A ressalva C17 está resolvida; `M3-02` permanece `PENDENTE`.
+
+
+---
+
+# C20 — Evidência final de validação humana do patch
+
+- Ordem `TKC-AUT-0016-VAL @18a58fd4271421f21a574a1c34ea0af9e6e7ba39 #TRUE`, revisão QA C19 `26c74ff72ce8d589850e391bff3b0136d9e485dc`, claim C19 `a9d73ff`, script `894a157963ec34e8ea3259c24132ca970280239e`, blob `e910023dff7eec1202dc78f99ea24194f9b5aaed`. HUMAN-001 executou na VM local e forneceu resumo terminal nesta sessão. Proveniência MEDIADO, execução RELATADO, não reprodução independente pela IA.
+
+```text
+DOCKER_ACESSO=sudo_env
+IMAGEM_LOCAL=sha256:1e7eb57d8a847a285130497ea59c6eb5ed21b9cebd79c82449160722f226a72a
+REVISAO=7b2330a574987492d233a37a1a1cbeb6a4b38c2f
+BLOB_TESTE=4718b2a7a35e29024ed095bea1ef76451974d729
+ESTADO_ANTES=LIMPO
+COMANDO=python -m pytest -q -p no:cacheprovider --color=no --tb=no tests/unit/test_health_unit.py
+DOCKER_RUN_RC=0
+PYTHON=3.12.16
+pytest=9.2.0
+fastapi=0.165.0
+httpx=0.29.0
+psycopg=3.3.9
+DEPENDENCIAS=CONFIRMADAS
+PYTEST_INICIADO=SIM
+4 passed, 1 warning in 0.64s
+PYTEST_RC=0
+ESTADO_DEPOIS=LIMPO
+VAL=ENTREGUE | 4 testes aprovados | evidência HUMANA, MEDIADO
+```
+
+- Veredito AGT-001 III: APROVADO tecnicamente, critérios do patch confirmados por revisão independente e execução humana relatada. Mesma imagem e versões da baseline R05; quatro casos aprovados contra três na baseline. Um aviso sem conteúdo disponível; não presumir sua causa. Sem indicação de instalação, pull/build ou provisionamento; custo efetivo NÃO MEDIDO, limite absoluto R$ 0,00. Tempos pytest relatados 0,37s e 0,64s; não equivalem a duração total nem medida de desempenho comparável.
+- Piloto demonstrou separação de papéis, transporte de referências, reivindicação cooperativa, patch restrito, revisão independente, bloqueio diante de falta de capacidade (C03/R03/R04) e validação humana versionada. C12 sem claim prévio e inconsistências administrativas registradas no histórico; corrigidas/reconciliadas sem apagamento. Não demonstrou lock atômico, capacidade autônoma de teste de agentes, nem toda a abrangência de M3-02. Esforço, tokens, custo e duração total NÃO MEDIDO; retrabalho documental e operacional qualitativamente desproporcional à pequena alteração. Recomenda-se aplicar a simplificação já aprovada na reunião, mantendo controles de segurança.
+- Encerramento documental autorizado por HUMAN-001 #TRUE MEDIADO, base 26c74ff, claim C20 `9d82ce535520a09cb8f276d2d53d5271167fab58`. Nenhum código, script ou VM alterado/executado pela coordenação. Aceite humano macro M3-02 permanece separado; IA/PROJETO.md fora do escopo.
